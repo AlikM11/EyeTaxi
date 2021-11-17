@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="AdminPanel.Views.DriverEditView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AdminPanel.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Button Content="Save" Background="#FFFBB724" FontSize="20" HorizontalAlignment="Right" Command="{Binding SaveCommand}" FontWeight="Bold" FontFamily="Felix Titling"/>
+
+        <StackPanel Grid.Row="1">
+            <TextBox Text="{Binding Driver.FullName}" Height="30"/>
+            <TextBox Text="{Binding Driver.PhoneNumber}"  Height="30"/>
+            <TextBox Text="{Binding Driver.Car.Model}"  Height="30"/>
+            <TextBox Text="{Binding Driver.Car.Color}"  Height="30"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

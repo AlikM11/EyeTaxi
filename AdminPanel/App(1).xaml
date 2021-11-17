@@ -1,0 +1,22 @@
+﻿<Application x:Class="AdminPanel.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:AdminPanel"
+             StartupUri="Views/MainView.xaml"
+             xmlns:views="clr-namespace:AdminPanel.Views"
+             xmlns:viewmodels="clr-namespace:AdminPanel.ViewModels">
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type viewmodels:PricingViewModel}">
+            <views:PricingView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:DriverListViewModel}">
+            <views:DriverListView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:NavigationBarViewModel}">
+            <views:NavigationBarView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:DriverEditViewModel}">
+            <views:DriverEditView/>
+        </DataTemplate>
+    </Application.Resources>
+</Application>

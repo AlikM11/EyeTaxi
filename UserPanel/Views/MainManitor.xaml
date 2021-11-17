@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="UserPanel.Views.MainManitor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UserPanel.Views"
+             mc:Ignorable="d" 
+              Height="770" Width="1310">
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="2*">
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="8*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Content="Eye Taxi" HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top" FontFamily="Felix Titling" FontSize="20" Foreground="Black"/>
+        <Image Grid.Column="1" Grid.Row="1" Source="/icons/taxi icon.jpg" Margin="0.4,9.6,0,-9.8"></Image>
+        <Label Content="Taxi Desktop App." HorizontalAlignment="Left" Margin="50,29.6,0,0" Grid.Row="1" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+        <Label Content="Easy, fast and safe" HorizontalAlignment="Left" Margin="50,90,0,0" Grid.Row="1" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+        <Label Content="service." HorizontalAlignment="Left" Margin="50,155,0,0" Grid.Row="1" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+        <Label HorizontalAlignment="Left" Margin="55,210,0,0" Grid.Row="1" VerticalAlignment="Top" Height="7" Width="114" Background="#FFFBB724"/>
+        <Border BorderThickness="0" Background="#FFFBB724" HorizontalAlignment="Left" Height="67" Margin="55,479,0,0" Grid.Row="1" VerticalAlignment="Top" Width="289" CornerRadius="30">
+            <Button Background="#FFFBB724" Content="LOGIN" VerticalAlignment="Top" Height="38" HorizontalAlignment="Left" Width="277" Command="{Binding LoginCommand}"  Margin="9,9,0,0" BorderBrush="#FFFBB724" FontSize="20" FontWeight="Bold"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="0" Background="#FFFBB724" CornerRadius="30" HorizontalAlignment="Left" Height="67" Margin="55,572,0,0" Grid.Row="1" VerticalAlignment="Top" Width="289">
+            <Button  BorderThickness="0" Margin="9" Background="#FFFBB724" Content="Register" FontSize="20" FontWeight="Bold" Command="{Binding NavigateRegisterCommand}" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.65"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+        </Border>
+        <TextBox HorizontalAlignment="Left" Height="39" Margin="126,290,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="217" BorderThickness="6" BorderBrush="#FFFBB724" Text="{Binding Username,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Label Content="Username:" HorizontalAlignment="Left" Margin="-1,287,0,0" Grid.Row="1" VerticalAlignment="Top" Height="45" Width="117" FontSize="22"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="-1,357,0,0" Grid.Row="1" VerticalAlignment="Top" Height="45" Width="117" FontSize="22"/>
+        <TextBox HorizontalAlignment="Left" Height="39" Margin="127,360,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="217" BorderThickness="6" BorderBrush="#FFFBB724"/>
+    </Grid>
+</UserControl>
